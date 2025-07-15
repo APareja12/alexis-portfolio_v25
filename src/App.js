@@ -20,33 +20,31 @@ import {
 const projectsData = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Golden Silence - Silent Films Database',
     description:
-      'Full-stack React application with Node.js backend, featuring real-time inventory management and secure payment processing.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'JWT', 'Express'],
-    image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    github: 'https://github.com/yourusername/ecommerce-platform',
-    live: 'https://your-ecommerce-demo.netlify.app',
-    category: 'Full Stack',
+      'A comprehensive database showcasing the art and history of silent cinema with elegant vintage-inspired design, advanced search functionality, and film categorization.',
+    tech: ['React', 'JavaScript', 'CSS3', 'Responsive Design', 'Film Database'],
+    image: '/images/projects/golden-silence.jpg',
+    github: 'https://github.com/APareja12/golden-silence',
+    live: 'https://g-silence.netlify.app',
+    category: 'Frontend',
     featured: true,
     status: 'Completed',
     year: '2024',
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Checkpoint Productions',
     description:
-      'Collaborative productivity tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    tech: ['React', 'Firebase', 'Material-UI', 'WebSocket', 'Context API'],
-    image:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-    github: 'https://github.com/yourusername/task-manager',
-    live: 'https://your-taskmanager.netlify.app',
+      'Clean, responsive portfolio website built with core web technologies including HTML5, CSS3, and JavaScript. Features semantic markup structure, custom styling for professional presentation, and interactive JavaScript functionality for enhanced user experience.',
+    tech: ['CSS', 'HTML', 'Javascript'],
+    image: '/images/projects/checkpointproductions.jpg',
+    github: 'https://github.com/APareja12/checkpointpro',
+    live: 'https://checkpointproductions.com',
     category: 'Frontend',
     featured: true,
-    status: 'In Progress',
-    year: '2024',
+    status: 'Completed',
+    year: '2022',
   },
   {
     id: 3,
@@ -75,9 +73,9 @@ const projectsData = [
 const cmsProjectsData = [
   {
     id: 1,
-    title: 'Business Website',
+    title: 'Town of Sidney',
     description:
-      'Professional WordPress website for a local business with custom theme, SEO optimization, and contact forms.',
+      'Professional WordPress website for a local government with custom theme, board meetings calendar, tax payment portal, SEO optimization, and contact forms.',
     platform: 'WordPress',
     features: [
       'Custom Theme',
@@ -85,19 +83,18 @@ const cmsProjectsData = [
       'Contact Forms',
       'Mobile Responsive',
     ],
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    live: 'https://your-wordpress-site.com',
-    category: 'Business',
-    client: 'Local Business',
+    image: 'images/projects/townofsidney.jpg',
+    live: 'https://townofsidneyny.gov',
+    category: 'Government',
+    client: 'Local Government',
     status: 'Completed',
-    year: '2024',
+    year: '2023',
   },
   {
     id: 2,
-    title: 'Portfolio Website',
+    title: 'Artist Website',
     description:
-      'Creative portfolio website built with Wix featuring custom animations, gallery showcases, and client testimonials.',
+      'Creative artist website built with Wix featuring custom animations, gallery showcases, and blog.',
     platform: 'Wix',
     features: [
       'Custom Animations',
@@ -105,13 +102,12 @@ const cmsProjectsData = [
       'Testimonials',
       'Booking System',
     ],
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
-    live: 'https://your-wix-site.wixsite.com/portfolio',
+    image: 'images/projects/alexispareja.jpg',
+    live: 'https://www.alexispareja.com',
     category: 'Portfolio',
     client: 'Creative Professional',
     status: 'Completed',
-    year: '2024',
+    year: '2020',
   },
   {
     id: 3,
@@ -741,7 +737,7 @@ const Portfolio = () => {
               }}
             >
               <Palette size={20} />
-              WordPress & Wix
+              WordPress & Web Creation Platforms
             </button>
           </div>
 
@@ -1367,8 +1363,6 @@ const Portfolio = () => {
               </a>
               <a
                 href="mailto:alexis.pareja@hotmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Mail size={32} />
