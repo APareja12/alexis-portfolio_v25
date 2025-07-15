@@ -111,9 +111,9 @@ const cmsProjectsData = [
   },
   {
     id: 3,
-    title: 'E-commerce Store',
+    title: 'This Bee Lana',
     description:
-      'Online store built with WordPress and WooCommerce, featuring product catalogs, payment integration, and inventory management.',
+      'Online store built with WordPress and WooCommerce, featuring product catalogs, event calendar, and contact form.',
     platform: 'WordPress',
     features: [
       'WooCommerce',
@@ -121,13 +121,26 @@ const cmsProjectsData = [
       'Inventory System',
       'Product Reviews',
     ],
-    image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    live: 'https://your-ecommerce-wp.com',
+    image: 'images/projects/thisbeelana.jpg',
+    live: 'https://thisbeelana.com',
     category: 'E-commerce',
     client: 'Retail Business',
     status: 'Completed',
-    year: '2023',
+    year: '2022',
+  },
+  {
+    id: 4,
+    title: 'We Are All Related',
+    description:
+      'A non-profit organization holding events for the International Council of Thirteen Indigenous Grandmothers.',
+    platform: 'WordPress',
+    features: ['Contact Form', 'Event Tickets'],
+    image: 'images/projects/weareallrelated.jpg',
+    live: 'https://www.weareallrelated.earth',
+    category: 'E-commerce',
+    client: 'Non-profit',
+    status: 'Completed',
+    year: '2024',
   },
 ];
 
@@ -364,7 +377,7 @@ const Portfolio = () => {
                 lineHeight: 1.7,
               }}
             >
-              Remote developer from Manhattan with experience at Muratek,
+              Remote developer from New Jersey with experience at Muratek,
               specializing in creating responsive, user-friendly web
               applications with clean, maintainable code.
             </p>
@@ -500,10 +513,10 @@ const Portfolio = () => {
                     lineHeight: 1.7,
                   }}
                 >
-                  I'm a passionate web developer with experience working
-                  remotely at Muratek, an IT/networking company in Manhattan. I
-                  specialize in creating modern, responsive web applications
-                  using the latest technologies.
+                  I'm a passionate full stack engineer with experience working
+                  remotely at Muratek, an IT/networking company in Manhattan and
+                  freelancing. I specialize in creating modern, responsive web
+                  applications using the latest technologies.
                 </p>
                 <p
                   style={{
