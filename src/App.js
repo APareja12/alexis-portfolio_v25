@@ -196,6 +196,15 @@ const Portfolio = () => {
     { name: 'Tools', items: ['Git', 'Docker', 'AWS', 'Figma', 'Webpack'] },
   ];
 
+  const formInputStyle = {
+    padding: '1rem',
+    borderRadius: '0.5rem',
+    border: '1px solid rgba(255, 255, 255, 0.3)',
+    background: 'rgba(255, 255, 255, 0.1)',
+    color: 'white',
+    fontSize: '1rem',
+  };
+
   return (
     <div
       style={{
@@ -404,21 +413,6 @@ const Portfolio = () => {
               >
                 View My Work
               </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  color: 'white',
-                  background: 'transparent',
-                  padding: '1rem 2rem',
-                  borderRadius: '9999px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  fontSize: '1rem',
-                }}
-              >
-                Get In Touch
-              </button>
             </div>
             <div
               style={{
@@ -443,12 +437,19 @@ const Portfolio = () => {
               >
                 <Linkedin size={24} />
               </a>
-              <a
-                href="mailto:alexis.pareja@hotmail.com"
-                style={{ color: '#9ca3af', textDecoration: 'none' }}
+              <button
+                onClick={() => scrollToSection('contact')}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#9ca3af',
+                  cursor: 'pointer',
+                  padding: '0',
+                  transition: 'all 0.2s ease',
+                }}
               >
                 <Mail size={24} />
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1327,10 +1328,8 @@ const Portfolio = () => {
                 margin: '0 auto 2rem',
               }}
             >
-              {/* Hidden field for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
 
-              {/* Honeypot field for spam protection */}
               <div style={{ display: 'none' }}>
                 <label>
                   Don't fill this out if you're human:{' '}
@@ -1350,28 +1349,14 @@ const Portfolio = () => {
                   name="name"
                   placeholder="Your Name"
                   required
-                  style={{
-                    padding: '1rem',
-                    borderRadius: '0.5rem',
-                    border: '1px solid rgba(255, 255, 255, 0.3)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
-                    fontSize: '1rem',
-                  }}
+                  style={formInputStyle}
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email"
                   required
-                  style={{
-                    padding: '1rem',
-                    borderRadius: '0.5rem',
-                    border: '1px solid rgba(255, 255, 255, 0.3)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
-                    fontSize: '1rem',
-                  }}
+                  style={formInputStyle}
                 />
               </div>
 
@@ -1380,14 +1365,7 @@ const Portfolio = () => {
                 name="subject"
                 placeholder="Subject"
                 required
-                style={{
-                  padding: '1rem',
-                  borderRadius: '0.5rem',
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white',
-                  fontSize: '1rem',
-                }}
+                style={formInputStyle}
               />
 
               <textarea
@@ -1396,12 +1374,7 @@ const Portfolio = () => {
                 required
                 rows="5"
                 style={{
-                  padding: '1rem',
-                  borderRadius: '0.5rem',
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white',
-                  fontSize: '1rem',
+                  ...formInputStyle,
                   resize: 'vertical',
                 }}
               ></textarea>
@@ -1431,40 +1404,7 @@ const Portfolio = () => {
                 gap: '1.5rem',
                 marginBottom: '2rem',
               }}
-            >
-              <a
-                href="mailto:alexis.pareja@hotmail.com"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  color: 'white',
-                  background: 'transparent',
-                  padding: '1rem 2rem',
-                  borderRadius: '9999px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  fontSize: '1rem',
-                }}
-              >
-                Direct Email
-              </a>
-              <a
-                href="https://linkedin.com/in/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  color: 'white',
-                  background: 'transparent',
-                  padding: '1rem 2rem',
-                  borderRadius: '9999px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  fontSize: '1rem',
-                }}
-              >
-                LinkedIn
-              </a>
-            </div>
+            ></div>
 
             <div
               style={{
@@ -1489,12 +1429,19 @@ const Portfolio = () => {
               >
                 <Linkedin size={32} />
               </a>
-              <a
-                href="mailto:alexis.pareja@hotmail.com"
-                style={{ color: '#9ca3af', textDecoration: 'none' }}
+              <button
+                onClick={() => scrollToSection('contact')}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#9ca3af',
+                  cursor: 'pointer',
+                  padding: '0',
+                  transition: 'all 0.2s ease',
+                }}
               >
-                <Mail size={32} />
-              </a>
+                <Mail size={24} />
+              </button>
             </div>
           </div>
         </div>
