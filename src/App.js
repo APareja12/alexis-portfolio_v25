@@ -303,7 +303,6 @@ const Portfolio = () => {
           </button>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section
         id="hero"
@@ -466,7 +465,6 @@ const Portfolio = () => {
           <ChevronDown size={32} />
         </div>
       </section>
-
       {/* About Section */}
       <section id="about" style={{ padding: '5rem 0', position: 'relative' }}>
         <div
@@ -650,7 +648,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Projects Section */}
       <section id="projects" style={{ padding: '5rem 0' }}>
         <div
@@ -935,6 +932,8 @@ const Portfolio = () => {
                         <div style={{ display: 'flex', gap: '0.75rem' }}>
                           <a
                             href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             style={{
                               display: 'flex',
                               alignItems: 'center',
@@ -949,6 +948,8 @@ const Portfolio = () => {
                           </a>
                           <a
                             href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             style={{
                               display: 'flex',
                               alignItems: 'center',
@@ -1167,6 +1168,8 @@ const Portfolio = () => {
                       <div style={{ display: 'flex', gap: '0.75rem' }}>
                         <a
                           href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -1188,7 +1191,6 @@ const Portfolio = () => {
           )}
         </div>
       </section>
-
       {/* Skills Section */}
       <section id="skills" style={{ padding: '5rem 0' }}>
         <div
@@ -1310,20 +1312,132 @@ const Portfolio = () => {
               Ready to bring your ideas to life? Let's discuss your next
               project.
             </p>
+
+            {/* Contact Form */}
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1.5rem',
+                maxWidth: '600px',
+                margin: '0 auto 2rem',
+              }}
+            >
+              {/* Hidden field for Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+
+              {/* Honeypot field for spam protection */}
+              <div style={{ display: 'none' }}>
+                <label>
+                  Don't fill this out if you're human:{' '}
+                  <input name="bot-field" />
+                </label>
+              </div>
+
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '1rem',
+                }}
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  style={{
+                    padding: '1rem',
+                    borderRadius: '0.5rem',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '1rem',
+                  }}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  style={{
+                    padding: '1rem',
+                    borderRadius: '0.5rem',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '1rem',
+                  }}
+                />
+              </div>
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+                style={{
+                  padding: '1rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white',
+                  fontSize: '1rem',
+                }}
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows="5"
+                style={{
+                  padding: '1rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white',
+                  fontSize: '1rem',
+                  resize: 'vertical',
+                }}
+              ></textarea>
+
+              <button
+                type="submit"
+                style={{
+                  background: 'linear-gradient(45deg, #2563eb, #7c3aed)',
+                  color: 'white',
+                  padding: '1rem 2rem',
+                  borderRadius: '9999px',
+                  fontWeight: 600,
+                  border: 'none',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                }}
+              >
+                Send Message
+              </button>
+            </form>
+
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'center',
                 gap: '1.5rem',
                 marginBottom: '2rem',
-                flexWrap: 'wrap',
               }}
             >
               <a
                 href="mailto:alexis.pareja@hotmail.com"
                 style={{
-                  background: 'linear-gradient(45deg, #2563eb, #7c3aed)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
                   color: 'white',
+                  background: 'transparent',
                   padding: '1rem 2rem',
                   borderRadius: '9999px',
                   fontWeight: 600,
@@ -1331,10 +1445,10 @@ const Portfolio = () => {
                   fontSize: '1rem',
                 }}
               >
-                Email Me
+                Direct Email
               </a>
               <a
-                href="https://linkedin.com/in/alexis-pareja-b964b36b/"
+                href="https://linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -1351,6 +1465,7 @@ const Portfolio = () => {
                 LinkedIn
               </a>
             </div>
+
             <div
               style={{
                 display: 'flex',
@@ -1359,7 +1474,7 @@ const Portfolio = () => {
               }}
             >
               <a
-                href="https://github.com/APareja12"
+                href="https://github.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
@@ -1367,7 +1482,7 @@ const Portfolio = () => {
                 <Github size={32} />
               </a>
               <a
-                href="https://linkedin.com/in/alexis-pareja-b964b36b/"
+                href="https://linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
@@ -1384,7 +1499,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer
         style={{
