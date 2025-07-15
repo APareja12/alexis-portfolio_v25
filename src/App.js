@@ -215,6 +215,18 @@ const Portfolio = () => {
         fontFamily: 'Inter, sans-serif',
       }}
     >
+      <style>
+        {`
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(167, 139, 250, 0.8), 0 0 40px rgba(244, 114, 182, 0.6);
+    }
+  }
+`}
+      </style>
       {/* Navigation */}
       <nav
         style={{
@@ -312,7 +324,7 @@ const Portfolio = () => {
           </button>
         </div>
       </nav>
-      {/* Hero Section */}
+      {/* Hero Section with Profile Picture */}
       <section
         id="hero"
         style={{
@@ -352,6 +364,60 @@ const Portfolio = () => {
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
             }}
           >
+            {/* Profile Picture */}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginBottom: '2rem',
+              }}
+            >
+              <div
+                style={{
+                  position: 'relative',
+                  width: '150px',
+                  height: '150px',
+                }}
+              >
+                {/* Glowing ring effect */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: '-4px',
+                    background:
+                      'linear-gradient(45deg, #60a5fa, #a78bfa, #f472b6)',
+                    borderRadius: '50%',
+                    padding: '4px',
+                    animation: 'glow 2s ease-in-out infinite alternate',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '50%',
+                      background: 'rgba(15, 23, 42, 0.8)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <img
+                      src="/images/projects/profile.jpg"
+                      alt="Alexis Pareja"
+                      style={{
+                        width: '140px',
+                        height: '140px',
+                        borderRadius: '50%',
+                        objectFit: 'cover',
+                        border: '3px solid rgba(255, 255, 255, 0.2)',
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <h1
               style={{
                 fontSize: '4rem',
@@ -363,7 +429,7 @@ const Portfolio = () => {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Web Developer
+              Full Stack Engineer
             </h1>
             <p
               style={{
@@ -385,7 +451,7 @@ const Portfolio = () => {
                 lineHeight: 1.7,
               }}
             >
-              Remote developer from New Jersey with experience at Muratek,
+              Remote developer from Manhattan with experience at Muratek,
               specializing in creating responsive, user-friendly web
               applications with clean, maintainable code.
             </p>
@@ -623,7 +689,7 @@ const Portfolio = () => {
                           marginBottom: '0.25rem',
                         }}
                       >
-                        Web Developer
+                        Full Stack Engineer
                       </h4>
                       <p
                         style={{
@@ -1275,7 +1341,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" style={{ padding: '5rem 0' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
