@@ -421,12 +421,16 @@ const Portfolio = () => {
             >
               <a
                 href="https://github.com/APareja12"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Github size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/alexis-pareja-b964b36b/"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Linkedin size={24} />
@@ -1307,7 +1311,7 @@ const Portfolio = () => {
               }}
             >
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:alexis.pareja@hotmail.com"
                 style={{
                   background: 'linear-gradient(45deg, #2563eb, #7c3aed)',
                   color: 'white',
@@ -1321,7 +1325,9 @@ const Portfolio = () => {
                 Email Me
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/alexis-pareja-b964b36b/"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   border: '1px solid rgba(255, 255, 255, 0.3)',
                   color: 'white',
@@ -1344,19 +1350,25 @@ const Portfolio = () => {
               }}
             >
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/APareja12"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Github size={32} />
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/alexis-pareja-b964b36b/"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Linkedin size={32} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:alexis.pareja@hotmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#9ca3af', textDecoration: 'none' }}
               >
                 <Mail size={32} />
