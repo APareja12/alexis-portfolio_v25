@@ -62,3 +62,6 @@ node_modules/
 dist/
 build/
 .next/
+
+!public/images/**/*-optimized.*
+!public/images/**/*-small.*
