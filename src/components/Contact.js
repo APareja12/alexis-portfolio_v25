@@ -1,67 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Github, Linkedin, Mail, Send } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    console.log('Form data being sent:', formData);
-
-    try {
-      const formBody = new URLSearchParams({
-        'form-name': 'contact',
-        ...formData,
-      }).toString();
-
-      console.log('Form body:', formBody);
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formBody,
-      });
-
-      console.log('Response status:', response.status);
-      console.log('Response ok:', response.ok);
-
-      if (response.ok) {
-        alert(
-          "🎉 Message sent successfully! I'll get back to you within 24 hours."
-        );
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        const responseText = await response.text();
-        console.log('Error response:', responseText);
-        throw new Error(
-          `Form submission failed with status: ${response.status}`
-        );
-      }
-    } catch (error) {
-      console.error('Detailed error:', error);
-      alert(
-        `❌ Error: ${error.message}. Please try emailing me directly at alexis.pareja@hotmail.com`
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
@@ -89,14 +29,13 @@ const Contact = () => {
               <textarea name="message"></textarea>
             </form>
 
-            {/* Contact Form */}
+            {/* Static Contact Form - Netlify will detect this */}
             <form
-              onSubmit={handleSubmit}
-              className="space-y-6 max-w-2xl mx-auto mb-12"
               name="contact"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              className="space-y-6 max-w-2xl mx-auto mb-12"
             >
               {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
@@ -188,13 +127,10 @@ const Contact = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className={`btn-primary w-full md:w-auto px-8 py-4 text-lg flex items-center justify-center space-x-2 mx-auto ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                }`}
+                className="btn-primary w-full md:w-auto px-8 py-4 text-lg flex items-center justify-center space-x-2 mx-auto"
               >
                 <Send size={20} />
-                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                <span>Send Message</span>
               </button>
             </form>
 
