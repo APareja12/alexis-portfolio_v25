@@ -1,9 +1,10 @@
+// src/components/Hero.js - With Tailwind
 import React from 'react';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 
 const Hero = ({ scrollToSection }) => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-secondary-500/20 to-accent-500/20 animate-pulse-slow" />
 

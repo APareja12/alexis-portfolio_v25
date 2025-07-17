@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Portfolio.css'; // Make sure this imports your Tailwind CSS
+import './Portfolio.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
