@@ -32,14 +32,19 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
+        // Show success message
+        alert(
+          "🎉 Message sent successfully! I'll get back to you within 24 hours."
+        );
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your message. Please try again.');
+      alert(
+        '❌ There was an error submitting your message. Please try emailing me directly at alexis.pareja@hotmail.com'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -71,7 +76,19 @@ const Contact = () => {
             <form
               onSubmit={handleSubmit}
               className="space-y-6 max-w-2xl mx-auto mb-12"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
+              {/* Hidden fields for Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div className="hidden">
+                <label>
+                  Don't fill this out if you're human:{' '}
+                  <input name="bot-field" />
+                </label>
+              </div>
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -185,7 +202,7 @@ const Contact = () => {
                 <Linkedin size={32} />
               </a>
               <a
-                href="mailto:contact@alexispareja.dev"
+                href="mailto:alexis.pareja@hotmail.com"
                 className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:-translate-y-1 p-3"
                 aria-label="Email"
               >
