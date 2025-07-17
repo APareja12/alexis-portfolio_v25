@@ -81,7 +81,7 @@ export const cmsProjectsData = [
       'Testimonials',
       'Booking System',
     ],
-    image: 'images/projects/alexispareja.jpg',
+    image: 'https://imgur.com/4b0e2Or',
     live: 'https://www.alexispareja.com',
     category: 'Portfolio',
     client: 'Creative Professional',
