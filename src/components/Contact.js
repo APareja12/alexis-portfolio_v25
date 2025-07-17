@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32">
+    <section id="contact" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <div className="glass-card p-8 md:p-12 text-center">

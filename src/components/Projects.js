@@ -1,4 +1,3 @@
-// src/components/Projects.js - With Tailwind
 import React, { useState } from 'react';
 import { Github, ExternalLink, Plus, Code, Palette } from 'lucide-react';
 import { cmsProjectsData, categories } from '../data/projects';
@@ -18,7 +17,7 @@ const Projects = ({
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-20 lg:py-32">
+    <section id="projects" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">

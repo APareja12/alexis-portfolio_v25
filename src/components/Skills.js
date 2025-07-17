@@ -3,7 +3,7 @@ import { skills } from '../data/projects';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 lg:py-32">
+    <section id="skills" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
         <h2 className="section-title">Technical Skills</h2>
 

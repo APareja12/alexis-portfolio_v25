@@ -10,6 +10,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Account for fixed navbar */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
   }
@@ -42,10 +43,16 @@
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-bottom: 0.1em;
   }
 
   .text-gradient-hero {
     @apply bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-bottom: 0.1em;
   }
 
   .nav-link {
@@ -73,7 +80,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-gradient;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-gradient leading-tight pb-2;
   }
 
   .container-custom {

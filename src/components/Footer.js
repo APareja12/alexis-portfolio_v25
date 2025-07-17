@@ -18,7 +18,7 @@ const Footer = () => {
             <Heart size={16} className="text-red-400 animate-pulse" />
             <span>and</span>
             <Code2 size={16} className="text-primary-400" />
-            <span>in Manhattan</span>
+            <span>in New Jersey</span>
           </div>
 
           {/* Quick Links */}

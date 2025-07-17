@@ -1,4 +1,3 @@
-// src/components/Hero.js - With Tailwind
 import React from 'react';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 
@@ -25,7 +24,7 @@ const Hero = ({ scrollToSection }) => {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-gradient-hero animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-gradient-hero animate-fade-in leading-tight pb-2">
             Full Stack Engineer
           </h1>
 

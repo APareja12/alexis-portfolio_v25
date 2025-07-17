@@ -1,9 +1,10 @@
+// src/components/About.js - With Tailwind
 import React from 'react';
 import { Code, Palette, Zap } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 lg:py-32">
+    <section id="about" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
         <div className="glass-card p-8 md:p-12">
           <h2 className="section-title">About Me</h2>
