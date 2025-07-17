@@ -39,7 +39,7 @@ export const projectsData = [
       'Compund Finance API',
       'CSS with Glassmorphism',
     ],
-    image: '/images/projects/Defi.jpg',
+    image: 'https://imgur.com/KO2rLkU',
     github: 'https://github.com/APareja12/yield_dashboard',
     live: 'https://defiyields.netlify.app',
     category: 'Frontend, Backend',
