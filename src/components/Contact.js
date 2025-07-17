@@ -1,3 +1,4 @@
+// src/components/Contact.js - COMPLETELY FRESH VERSION
 import React from 'react';
 import { Github, Linkedin, Mail, Send } from 'lucide-react';
 
@@ -19,7 +20,7 @@ const Contact = () => {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/thank-you.html"
+              data-netlify-recaptcha="true"
               className="space-y-6 max-w-2xl mx-auto mb-12"
             >
               <input type="hidden" name="form-name" value="contact" />
