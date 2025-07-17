@@ -15,7 +15,7 @@ const Hero = ({ scrollToSection }) => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 rounded-full animate-glow" />
               <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-slate-900/80 rounded-full flex items-center justify-center">
                 <img
-                  src="/images/projects/profile.jpg"
+                  src="https://i.imgur.com/a66hSLl.jpeg"
                   alt="Alexis Pareja"
                   className="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full object-cover border-2 border-white/20"
                 />
