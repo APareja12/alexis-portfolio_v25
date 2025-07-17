@@ -1,4 +1,3 @@
-// src/components/Contact.js - COMPLETELY FRESH VERSION
 import React from 'react';
 import { Github, Linkedin, Mail, Send } from 'lucide-react';
 
