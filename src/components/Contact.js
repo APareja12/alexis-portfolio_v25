@@ -1,3 +1,4 @@
+// src/components/Contact.js - Reliable Netlify Form
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Send, CheckCircle } from 'lucide-react';
 
@@ -88,7 +89,12 @@ const Contact = () => {
             </p>
 
             {/* Hidden form for Netlify detection */}
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form
+              name="contact"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              hidden
+            >
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="text" name="subject" />
@@ -99,6 +105,8 @@ const Contact = () => {
             <form
               name="contact"
               method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-6 max-w-2xl mx-auto mb-12"
             >
