@@ -1,4 +1,3 @@
-// src/components/Contact.js - Reliable Netlify Form
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Send, CheckCircle } from 'lucide-react';
 
