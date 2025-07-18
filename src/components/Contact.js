@@ -1,7 +1,80 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, Linkedin, Mail, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Submit to Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        setIsSubmitting(false);
+        form.reset();
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        alert(
+          'Error sending message. Please email me directly at alexis.pareja@hotmail.com'
+        );
+      });
+  };
+
+  if (isSubmitted) {
+    return (
+      <section id="contact" className="py-20 lg:py-32 scroll-mt-20">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card p-8 md:p-12 text-center">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+                <CheckCircle size={40} className="text-white" />
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Thank You! 🎉
+              </h2>
+
+              <p className="text-xl text-gray-300 mb-6">
+                Your message has been sent successfully! I'll get back to you
+                within 24 hours.
+              </p>
+
+              <div className="mb-8 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                <p className="text-blue-300 text-sm">
+                  📧 Your message has been delivered to:{' '}
+                  <strong>alexis.pareja@hotmail.com</strong>
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="btn-primary"
+                >
+                  Send Another Message
+                </button>
+                <a href="#projects" className="btn-secondary">
+                  View My Work
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="py-20 lg:py-32 scroll-mt-20">
       <div className="container-custom">
@@ -14,20 +87,26 @@ const Contact = () => {
               project.
             </p>
 
+            {/* Hidden form for Netlify detection */}
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <input type="text" name="subject" />
+              <textarea name="message"></textarea>
+            </form>
+
+            {/* Actual form */}
             <form
               name="contact"
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              data-netlify-recaptcha="true"
+              onSubmit={handleSubmit}
               className="space-y-6 max-w-2xl mx-auto mb-12"
             >
               <input type="hidden" name="form-name" value="contact" />
+
+              {/* Honeypot */}
               <div className="hidden">
-                <label>
-                  Don't fill this out if you're human:{' '}
-                  <input name="bot-field" />
-                </label>
+                <input name="bot-field" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -100,13 +179,17 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn-primary w-full md:w-auto px-8 py-4 text-lg flex items-center justify-center space-x-2 mx-auto"
+                disabled={isSubmitting}
+                className={`btn-primary w-full md:w-auto px-8 py-4 text-lg flex items-center justify-center space-x-2 mx-auto ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
 
+            {/* Social Links */}
             <div className="flex justify-center space-x-8">
               <a
                 href="https://github.com/APareja12"
