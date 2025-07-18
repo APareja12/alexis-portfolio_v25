@@ -30,12 +30,12 @@ const Hero = ({ scrollToSection }) => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
-            Crafting digital experiences with modern web technologies
+            Crafting experiences with modern web technologies
           </p>
 
           {/* Description */}
           <p className="text-base md:text-lg lg:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in animation-delay-200">
-            Remote developer from Manhattan with experience at Muratek,
+            Remote developer from New Jersey with experience at Muratek,
             specializing in creating responsive, user-friendly web applications
             with clean, maintainable code.
           </p>

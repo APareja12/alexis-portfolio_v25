@@ -227,7 +227,7 @@ const Contact = () => {
 
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
-                Based in Manhattan, New York • Available for remote work
+                Based in New Jersey • Available for remote work
               </p>
             </div>
           </div>
